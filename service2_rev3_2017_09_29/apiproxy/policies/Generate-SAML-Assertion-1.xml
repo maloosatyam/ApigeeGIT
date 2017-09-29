@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GenerateSAMLAssertion ignoreContentType="false" name="Generate-SAML-Assertion-1">
+    <DisplayName>Generate SAML Assertion-1</DisplayName>
+    <KeyStore>
+        <Name>samlPOC</Name>
+        <Alias>samlPOC</Alias>
+    </KeyStore>
+    <Subject>subject</Subject>
+    <Issuer>issuer</Issuer>
+    <Template ignoreUnresolvedVariables="true"/>
+    <OutputVariable>
+        <Message name="message">
+            <XPath>/root/saml</XPath>
+        </Message>
+        <FlowVariable name="assertion.content"/>
+    </OutputVariable>
+</GenerateSAMLAssertion>

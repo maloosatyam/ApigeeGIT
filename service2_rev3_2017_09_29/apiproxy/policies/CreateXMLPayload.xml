@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="CreateXMLPayload">
+    <DisplayName>CreateXMLPayload</DisplayName>
+    <Set>
+        <Payload contentType="application/xml">
+            <root>
+                <saml name="abc" value=""/>
+                <element1>test</element1>
+            </root>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="service2">
+    <Basepaths>/service2</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1506434568978</CreatedAt>
+    <CreatedBy>satyam.maloo@prudential.co.uk</CreatedBy>
+    <Description></Description>
+    <DisplayName>service2</DisplayName>
+    <LastModifiedAt>1506510938095</LastModifiedAt>
+    <LastModifiedBy>satyam.maloo@prudential.co.uk</LastModifiedBy>
+    <Policies>
+        <Policy>AM-Redirect</Policy>
+        <Policy>CreateXMLPayload</Policy>
+        <Policy>Encode-Assertions</Policy>
+        <Policy>Extract-Variables-1</Policy>
+        <Policy>Generate-SAML-Assertion-1</Policy>
+        <Policy>Validate-SAML-Assertion-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://EncodeAssertion.js</Resource>
+        <Resource>jsc://core-min.js</Resource>
+        <Resource>jsc://enc-base64-min.js</Resource>
+        <Resource>jsc://enc-utf16-min.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

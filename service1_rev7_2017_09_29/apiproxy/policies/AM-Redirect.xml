@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="AM-Redirect">
+    <DisplayName>Assign Headers for 302 Redirect</DisplayName>
+    <Remove>
+        <Payload/>
+    </Remove>
+    <Set>
+        <StatusCode>302</StatusCode>
+        <Headers>
+            <Header name="Location">http://maloosatyam-test.apigee.net/service2</Header>
+        </Headers>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

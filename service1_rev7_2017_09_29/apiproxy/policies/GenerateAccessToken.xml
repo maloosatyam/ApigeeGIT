@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 name="GenerateAccessToken">
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>GenerateAccessTokenImplicitGrant</Operation>
+    <ExpiresIn>6000</ExpiresIn>
+    <GenerateResponse enabled="false"/>
+    <GenerateErrorResponse enabled="false"/>
+</OAuthV2>

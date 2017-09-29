@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMessageSetAuthToken">
+    <DisplayName>AssignMessageSetAuthToken</DisplayName>
+    <Remove>
+        <QueryParams/>
+    </Remove>
+    <!--<Set>
+        <StatusCode>200</StatusCode>
+        <Headers/>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {"accessToken": "@oauthv2accesstoken.GenerateAccessToken.access_token#"}
+        </Payload>
+    </Set>-->
+    <Set>
+        <StatusCode>200</StatusCode>
+        <Payload contentType="text/html" variablePrefix="@" variableSuffix="#">
+            <html>
+                <head>
+                    <title>Hello jQuery</title>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+                </head>
+                <body>
+                    <div>
+                        <button type="button">Click Me!</button>
+                        <p/>
+                        <textArea class="messageBody" rows="10" cols="150"/>
+                    </div>
+                </body>
+                <script>
+                     $(document).ready(function() {
+               	$("button").click(function()
+            	{
+            		$.ajax(
+            			{
+            				type:"GET",
+            				beforeSend: function(request) {
+            				request.setRequestHeader("Authorization", "Bearer @oauthv2accesstoken.GenerateAccessToken.access_token#");
+            				},
+            				url: "http://maloosatyam-test.apigee.net/service3",				
+            				success: function(result){
+            					$('.messageBody').text(JSON.stringify(result.results[0]));
+            					},
+            				statusCode: {
+            				401:function(result) {
+            				    $('.messageBody').text("");
+            				    alert(JSON.stringify(result.responseText));
+            				    }
+            				}
+            				});
+            	});
+            });
+                 </script>
+            </html>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request"/>
+</AssignMessage>

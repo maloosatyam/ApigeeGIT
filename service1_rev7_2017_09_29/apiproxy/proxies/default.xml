@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="Flow.GetAuthToken">
+            <Description/>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>AM-Redirect</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/getAuthToken")</Condition>
+        </Flow>
+        <Flow name="Flow.SAMLResponse">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>ExtractSAMLResponse</Name>
+                </Step>
+                <Step>
+                    <Name>DecodeSAML</Name>
+                </Step>
+                <Step>
+                    <Name>SetBodySAMLResponse</Name>
+                </Step>
+                <Step>
+                    <Name>SAML</Name>
+                </Step>
+                <Step>
+                    <Name>GenerateAccessToken</Name>
+                </Step>
+                <Step>
+                    <Name>AssignMessageSetAuthToken</Name>
+                </Step>
+            </Request>
+            <Response>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/samlResponse")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/service1</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

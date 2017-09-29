@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractSAMLResponse">
+    <DisplayName>ExtractSAMLResponse</DisplayName>
+    <FormParam name="samlResponse">
+        <Pattern>{samlResponse}</Pattern>
+    </FormParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

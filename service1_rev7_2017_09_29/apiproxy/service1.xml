@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="7" name="service1">
+    <Basepaths>/service1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1504538380337</CreatedAt>
+    <CreatedBy>satyam.maloo@prudential.co.uk</CreatedBy>
+    <Description></Description>
+    <DisplayName>service1</DisplayName>
+    <LastModifiedAt>1506594706205</LastModifiedAt>
+    <LastModifiedBy>satyam.maloo@prudential.co.uk</LastModifiedBy>
+    <Policies>
+        <Policy>AM-Redirect</Policy>
+        <Policy>AssignMessageSetAuthToken</Policy>
+        <Policy>DecodeSAML</Policy>
+        <Policy>ExtractSAMLResponse</Policy>
+        <Policy>GenerateAccessToken</Policy>
+        <Policy>SAML</Policy>
+        <Policy>SetBodySAMLResponse</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://DecodeSAML.js</Resource>
+        <Resource>jsc://core-min.js</Resource>
+        <Resource>jsc://enc-base64-min.js</Resource>
+        <Resource>jsc://enc-utf16-min.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="service3">
+    <Basepaths>/service3</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1506513147741</CreatedAt>
+    <CreatedBy>satyam.maloo@prudential.co.uk</CreatedBy>
+    <Description></Description>
+    <DisplayName>service3</DisplayName>
+    <LastModifiedAt>1506521722027</LastModifiedAt>
+    <LastModifiedBy>satyam.maloo@prudential.co.uk</LastModifiedBy>
+    <Policies>
+        <Policy>remove-header-authorization</Policy>
+        <Policy>verify-oauth-v2-access-token</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>TargetEndpoint-1</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

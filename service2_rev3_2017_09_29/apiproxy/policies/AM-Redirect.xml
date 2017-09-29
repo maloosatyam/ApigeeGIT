@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="AM-Redirect">
+    <DisplayName>Assign Headers for 302 Redirect</DisplayName>
+    <!--<Set>
+        <StatusCode>302</StatusCode>
+        <Headers>
+            <Header name="Verb">POST</Header>
+            <Header name="Location">http://maloosatyam-test.apigee.net/service1/samlResponse?response_type=token&amp;client_id=AKBAqzgF9c9s7i9002ImWz5Vfp6WzDkw&amp;redirect_uri=http://apigee.com</Header>
+        </Headers>
+        <Payload contentType="application/x-www-form-urlencoded"><![CDATA[<test>abc</test>]]></Payload>
+    </Set>-->
+    <Set>
+        <Payload contentType="text/html">
+            <html>
+                <head/>
+                <body Onload="document.forms[0].submit()">
+                    <form method="post" action="http://maloosatyam-test.apigee.net/service1/samlResponse?response_type=token&amp;client_id=AKBAqzgF9c9s7i9002ImWz5Vfp6WzDkw&amp;redirect_uri=http://apigee.com">
+                        <input type="hidden" name="samlResponse" value="{samlResponse}"/>
+                    </form>
+                    <!--<script type="text/JavaScript" language="JavaScript">document.myForm.submit();</script>-->
+                </body>
+            </html>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

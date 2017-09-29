@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-1">
+    <DisplayName>Extract Variables-1</DisplayName>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">response</Source>
+    <XMLPayload stopPayloadProcessing="false">
+        <Namespaces>
+            <Namespace prefix="saml">urn:oasis:names:tc:SAML:2.0:assertion</Namespace>
+        </Namespaces>
+        <Variable name="samlResponse" type="nodeset">
+            <XPath>/root/saml/saml:Assertion</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>
